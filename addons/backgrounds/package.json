@@ -1,0 +1,44 @@
+{
+  "name": "@storybook/addon-backgrounds",
+  "version": "4.2.0-alpha.9",
+  "description": "A storybook addon to show different backgrounds for your preview",
+  "keywords": [
+    "addon",
+    "background",
+    "react",
+    "storybook"
+  ],
+  "homepage": "https://github.com/storybooks/storybook/tree/master/addons/backgrounds",
+  "bugs": {
+    "url": "https://github.com/storybooks/storybook/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/storybooks/storybook.git"
+  },
+  "license": "MIT",
+  "author": "jbaxleyiii",
+  "main": "dist/index.js",
+  "jsnext:main": "src/index.js",
+  "scripts": {
+    "prepare": "node ../../scripts/prepare.js"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.5",
+    "@emotion/styled": "^10.0.6",
+    "@storybook/addons": "4.2.0-alpha.9",
+    "@storybook/client-logger": "4.2.0-alpha.9",
+    "@storybook/components": "4.2.0-alpha.9",
+    "@storybook/core-events": "4.2.0-alpha.9",
+    "core-js": "^2.6.1",
+    "eventemitter3": "^3.1.0",
+    "global": "^4.3.2",
+    "memoizerific": "^1.11.3",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "util-deprecate": "^1.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

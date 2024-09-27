@@ -1,0 +1,44 @@
+{
+  "name": "@storybook/addon-notes",
+  "version": "4.2.0-alpha.9",
+  "description": "Write notes for your Storybook stories.",
+  "keywords": [
+    "addon",
+    "notes",
+    "storybook"
+  ],
+  "homepage": "https://github.com/storybooks/storybook/tree/master/addons/notes",
+  "bugs": {
+    "url": "https://github.com/storybooks/storybook/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/storybooks/storybook.git"
+  },
+  "license": "MIT",
+  "main": "dist/public_api.js",
+  "types": "dist/public_api.d.ts",
+  "scripts": {
+    "prepare": "node ../../scripts/prepare.js"
+  },
+  "dependencies": {
+    "@emotion/styled": "^10.0.6",
+    "@storybook/addons": "4.2.0-alpha.9",
+    "@storybook/components": "4.2.0-alpha.9",
+    "@storybook/core-events": "4.2.0-alpha.9",
+    "markdown-to-jsx": "^6.9.0",
+    "prop-types": "^15.6.2",
+    "util-deprecate": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/prop-types": "^15.5.7",
+    "@types/util-deprecate": "^1.0.0",
+    "@types/webpack-env": "^1.13.6"
+  },
+  "peerDependencies": {
+    "react": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
