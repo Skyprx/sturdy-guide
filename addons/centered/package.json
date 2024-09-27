@@ -1,0 +1,49 @@
+{
+  "name": "@storybook/addon-centered",
+  "version": "6.0.0-alpha.13",
+  "description": "Storybook decorator to center components",
+  "keywords": [
+    "addon",
+    "storybook"
+  ],
+  "homepage": "https://github.com/storybookjs/storybook/tree/master/addons/centered",
+  "bugs": {
+    "url": "https://github.com/storybookjs/storybook/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/storybookjs/storybook.git",
+    "directory": "addons/centered"
+  },
+  "license": "MIT",
+  "author": "Muhammed Thanish <mnmtanish@gmail.com>",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "*.js",
+    "*.d.ts"
+  ],
+  "scripts": {
+    "prepare": "node ../../scripts/prepare.js"
+  },
+  "dependencies": {
+    "@storybook/addons": "6.0.0-alpha.13",
+    "core-js": "^3.0.1",
+    "global": "^4.0.0",
+    "util-deprecate": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/mithril": "^2.0.0",
+    "@types/webpack-env": "^1.15.1",
+    "mithril": "*",
+    "preact": "*",
+    "react": "*"
+  },
+  "peerDependencies": {
+    "react-dom": "*",
+    "regenerator-runtime": "*"
+  },
+  "gitHead": "4b9d901add9452525135caae98ae5f78dd8da9ff"
+}

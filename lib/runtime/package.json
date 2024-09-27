@@ -1,0 +1,34 @@
+{
+  "name": "@storybook/runtime",
+  "version": "6.0.0-alpha.13",
+  "description": "Storybook runtime",
+  "keywords": [
+    "client",
+    "rendering",
+    "runtime",
+    "stories",
+    "storybook"
+  ],
+  "homepage": "https://github.com/storybooks/storybook/tree/master/lib/runtime",
+  "bugs": {
+    "url": "https://github.com/storybooks/storybook/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/storybooks/storybook.git",
+    "directory": "lib/server"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepare": "node ../../scripts/prepare.js"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
+}
