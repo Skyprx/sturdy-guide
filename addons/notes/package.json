@@ -1,0 +1,52 @@
+{
+  "name": "@storybook/addon-notes",
+  "version": "5.1.0-alpha.10",
+  "description": "Write notes for your Storybook stories.",
+  "keywords": [
+    "addon",
+    "notes",
+    "storybook"
+  ],
+  "homepage": "https://github.com/storybooks/storybook/tree/master/addons/notes",
+  "bugs": {
+    "url": "https://github.com/storybooks/storybook/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/storybooks/storybook.git",
+    "directory": "addons/notes"
+  },
+  "license": "MIT",
+  "main": "dist/public_api.js",
+  "types": "dist/public_api.d.ts",
+  "scripts": {
+    "prepare": "node ../../scripts/prepare.js"
+  },
+  "dependencies": {
+    "@storybook/addons": "5.1.0-alpha.10",
+    "@storybook/api": "5.1.0-alpha.10",
+    "@storybook/client-logger": "5.1.0-alpha.10",
+    "@storybook/components": "5.1.0-alpha.10",
+    "@storybook/core-events": "5.1.0-alpha.10",
+    "@storybook/theming": "5.1.0-alpha.10",
+    "core-js": "^2.6.5",
+    "estraverse": "^4.2.0",
+    "markdown-to-jsx": "^6.9.3",
+    "prettier": "^1.16.4",
+    "prop-types": "^15.7.2",
+    "util-deprecate": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/estraverse": "^0.0.6",
+    "@types/prettier": "^1.16.1",
+    "@types/prop-types": "^15.5.9",
+    "@types/util-deprecate": "^1.0.0",
+    "@types/webpack-env": "^1.13.7"
+  },
+  "peerDependencies": {
+    "react": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
