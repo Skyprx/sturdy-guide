@@ -1,0 +1,206 @@
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { RoutedLink, monoFonts } from '@storybook/components';
+import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/prism-light';
+import createElement from 'react-syntax-highlighter/dist/esm/create-element';
+import { EVENT_ID } from './events';
+
+// TODO: take from theme
+const highlighterTheme = {
+  ...darcula,
+  'pre[class*="language-"]': {
+    ...darcula['pre[class*="language-"]'],
+    margin: 'auto',
+    width: 'auto',
+    height: 'auto',
+    minHeight: '100%',
+    overflow: 'hidden',
+    boxSizing: 'border-box',
+    display: 'flex',
+    fontFamily: monoFonts.fontFamily,
+    fontSize: 'inherit',
+  },
+  'code[class*="language-"]': {
+    ...darcula['code[class*="language-"]'],
+    margin: 0,
+    fontFamily: 'inherit',
+  },
+};
+
+SyntaxHighlighter.registerLanguage('jsx', jsx);
+
+const styles = {
+  story: {
+    display: 'block',
+    textDecoration: 'none',
+    color: darcula['code[class*="language-"]'].color,
+  },
+  selectedStory: {
+    backgroundColor: 'rgba(255, 242, 60, 0.2)',
+  },
+  panel: {
+    width: '100%',
+  },
+};
+
+const areLocationsEqual = (a, b) =>
+  a.startLoc.line === b.startLoc.line &&
+  a.startLoc.col === b.startLoc.col &&
+  a.endLoc.line === b.endLoc.line &&
+  a.endLoc.col === b.endLoc.col;
+
+const getLocationKeys = locationsMap =>
+  locationsMap
+    ? Array.from(Object.keys(locationsMap)).sort(
+        (key1, key2) => locationsMap[key1].startLoc.line - locationsMap[key2].startLoc.line
+      )
+    : [];
+
+export default class StoryPanel extends Component {
+  state = { source: '// Here will be dragons 🐉' };
+
+  componentDidMount() {
+    const { channel } = this.props;
+
+    channel.on(EVENT_ID, ({ source, currentLocation, locationsMap }) => {
+      const locationsKeys = getLocationKeys(locationsMap);
+
+      this.setState({
+        source,
+        currentLocation,
+        locationsMap,
+        locationsKeys,
+      });
+    });
+  }
+
+  componentDidUpdate() {
+    if (this.selectedStoryRef) {
+      this.selectedStoryRef.scrollIntoView();
+    }
+  }
+
+  setSelectedStoryRef = ref => {
+    this.selectedStoryRef = ref;
+  };
+
+  clickOnStory = (kind, story) => {
+    const { api } = this.props;
+
+    if (kind && story) {
+      api.selectStory(kind, story);
+    }
+  };
+
+  createPart = (rows, stylesheet, useInlineStyles) =>
+    rows.map((node, i) =>
+      createElement({
+        node,
+        stylesheet,
+        useInlineStyles,
+        key: `code-segement${i}`,
+      })
+    );
+
+  createStoryPart = (rows, stylesheet, useInlineStyles, location, kindStory) => {
+    const { currentLocation } = this.state;
+    const first = location.startLoc.line - 1;
+    const last = location.endLoc.line;
+
+    const storyRows = rows.slice(first, last);
+    const story = this.createPart(storyRows, stylesheet, useInlineStyles);
+    const storyKey = `${first}-${last}`;
+
+    if (areLocationsEqual(location, currentLocation)) {
+      return (
+        <div key={storyKey} ref={this.setSelectedStoryRef} style={styles.selectedStory}>
+          {story}
+        </div>
+      );
+    }
+
+    const [selectedKind, selectedStory] = kindStory.split('@');
+    const url = `/?selectedKind=${selectedKind}&selectedStory=${selectedStory}`;
+
+    return (
+      <RoutedLink
+        href={url}
+        key={storyKey}
+        onClick={() => this.clickOnStory(selectedKind, selectedStory)}
+        style={styles.story}
+      >
+        {story}
+      </RoutedLink>
+    );
+  };
+
+  createParts = (rows, stylesheet, useInlineStyles) => {
+    const { locationsMap, locationsKeys } = this.state;
+
+    const parts = [];
+    let lastRow = 0;
+
+    locationsKeys.forEach(key => {
+      const location = locationsMap[key];
+      const first = location.startLoc.line - 1;
+      const last = location.endLoc.line;
+
+      const start = this.createPart(rows.slice(lastRow, first), stylesheet, useInlineStyles);
+      const storyPart = this.createStoryPart(rows, stylesheet, useInlineStyles, location, key);
+
+      parts.push(start);
+      parts.push(storyPart);
+
+      lastRow = last;
+    });
+
+    const lastPart = this.createPart(rows.slice(lastRow), stylesheet, useInlineStyles);
+
+    parts.push(lastPart);
+
+    return parts;
+  };
+
+  lineRenderer = ({ rows, stylesheet, useInlineStyles }) => {
+    const { locationsMap, locationsKeys } = this.state;
+
+    if (!locationsMap || !locationsKeys.length) {
+      return this.createPart(rows, stylesheet, useInlineStyles);
+    }
+
+    const parts = this.createParts(rows, stylesheet, useInlineStyles);
+
+    return <span>{parts}</span>;
+  };
+
+  render() {
+    const { active } = this.props;
+    const { source } = this.state;
+
+    return active ? (
+      <SyntaxHighlighter
+        language="jsx"
+        showLineNumbers="true"
+        style={highlighterTheme}
+        renderer={this.lineRenderer}
+        customStyle={styles.panel}
+      >
+        {source}
+      </SyntaxHighlighter>
+    ) : null;
+  }
+}
+
+StoryPanel.propTypes = {
+  active: PropTypes.bool.isRequired,
+  api: PropTypes.shape({
+    selectStory: PropTypes.func.isRequired,
+  }).isRequired,
+  channel: PropTypes.shape({
+    emit: PropTypes.func,
+    on: PropTypes.func,
+    removeListener: PropTypes.func,
+  }).isRequired,
+};
