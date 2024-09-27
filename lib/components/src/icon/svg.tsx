@@ -1,0 +1,26 @@
+import { styled } from '@storybook/theming';
+import { CSSProperties } from 'react';
+
+export interface SvgProps {
+  inline?: boolean;
+  style?: CSSProperties;
+}
+
+const Svg = styled.svg<SvgProps>(
+  {
+    // Fix rendering bugs in Chrome for hdpi
+    shapeRendering: 'inherit',
+    transform: 'translate3d(0,0,0)',
+  },
+  ({ inline }) =>
+    inline
+      ? {
+          display: 'inline-block',
+        }
+      : {
+          display: 'block',
+        }
+);
+Svg.displayName = 'Svg';
+
+export { Svg as default };
