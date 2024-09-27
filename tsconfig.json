@@ -1,0 +1,24 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,    
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "target": "es5",
+    "types": [
+      "node",
+      "jest"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ]
+  }
+}
