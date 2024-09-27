@@ -1,0 +1,49 @@
+{
+    "angular":{
+        "template": "angular-cli",
+        "extraDependencies":[],
+        "devDependencies":[]
+    },
+    "marko":{
+        "template": "create-react-app",
+        "theming":true,
+        "extraDependencies":["marko"],
+        "devDependencies":[]
+    },
+    "polymer":{
+        "template": "create-react-app",
+        "extraDependencies":["lit-html"],
+        "devDependencies":[]
+    },
+    "preact":{
+        "template": "preact-cli",
+        "extraDependencies":[],
+        "devDependencies":[]
+    },
+    "react":{
+        "template": "create-react-app",
+        "theming":true,
+        "extraDependencies":[],
+        "devDependencies":[]
+    },
+    "riot":{
+        "template":"create-react-app",
+        "extraDependencies":[
+            "riot"
+        ],
+        "devDependencies":[]
+    },
+    "vue":{
+        "template":"vue-cli",
+        "rootDiv":true,
+        "extraDependencies":[
+            "vue", 
+            "@babel/preset-env", 
+            "@vue/cli-plugin-babel"
+        ],
+        "devDependencies":[
+            "@vue/babel-preset-app",
+            "@vue/cli-service"
+        ]
+    }
+}
