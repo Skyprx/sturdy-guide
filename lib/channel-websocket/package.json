@@ -1,0 +1,31 @@
+{
+  "name": "@storybook/channel-websocket",
+  "version": "5.0.11",
+  "description": "",
+  "keywords": [
+    "storybook"
+  ],
+  "homepage": "https://github.com/storybooks/storybook/tree/master/lib/channel-websocket",
+  "bugs": {
+    "url": "https://github.com/storybooks/storybook/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/storybooks/storybook.git"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepare": "node ../../scripts/prepare.js"
+  },
+  "dependencies": {
+    "@storybook/channels": "5.0.11",
+    "core-js": "^2.6.5",
+    "global": "^4.3.2",
+    "json-fn": "^1.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
