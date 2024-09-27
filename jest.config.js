@@ -1,0 +1,85 @@
+module.exports = {
+  cacheDirectory: '.cache/jest',
+  clearMocks: true,
+  moduleNameMapper: {
+    // non-js files
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      '<rootDir>/__mocks__/fileMock.js',
+    '\\.(css|scss|stylesheet)$': '<rootDir>/__mocks__/styleMock.js',
+    '\\.(md)$': '<rootDir>/__mocks__/htmlMock.js',
+    '@storybook/addon-storyshots-puppeteer/dist/(.*)':
+      '<rootDir>/addons/storyshots/storyshots-core/$1',
+    '@storybook/addon-storyshots/dist/(.*)': '<rootDir>/addons/storyshots/storyshots-puppeteer/$1',
+    '@storybook/(addons|api|channel-postmessage|channel-websocket|channels|cli|cli-sb|sli-storybook|client-api|client-logger|codemod|components|core|core-events|node-logger|postinstall|router|source-loader|theming|ui)/dist/(.*)':
+      '<rootDir>/lib/$1/src/$2',
+    '@storybook/(angular|ember|html|marko|mitril|polymer|preact|rax|react|react-native|react-native-server|riot|svelte|vue|web-components)/dist/(.*)':
+      '<rootDir>/app/$1$2',
+    '@storybook/addons-(a11y|actions|backgrounds|centered|contexts|cssresources|design-assets|docs|essentials|events|google-analytics|graphql|info|jest|knobs|links|notes)/dist/(.*)':
+      '<rootDir>/addons/$1/src/$2',
+    '@babel/(.*)/esm/(.*)': '<rootDir>/node_modules/@babel/$1/$2',
+    'react-syntax-highlighter/dist/esm/(.*)': 'react-syntax-highlighter/dist/cjs/$1',
+  },
+  projects: [
+    '<rootDir>',
+    '<rootDir>/examples/cra-kitchen-sink',
+    '<rootDir>/examples/cra-ts-kitchen-sink',
+    '<rootDir>/examples/html-kitchen-sink',
+    '<rootDir>/examples/riot-kitchen-sink',
+    '<rootDir>/examples/svelte-kitchen-sink',
+    '<rootDir>/examples/vue-kitchen-sink',
+    '<rootDir>/examples/angular-cli',
+    '<rootDir>/examples/preact-kitchen-sink',
+    '<rootDir>/examples/rax-kitchen-sink',
+  ],
+  roots: [
+    '<rootDir>/addons',
+    '<rootDir>/app',
+    '<rootDir>/lib',
+    '<rootDir>/examples/official-storybook',
+  ],
+  transform: {
+    '^.+\\.stories\\.[jt]sx?$': '@storybook/addon-storyshots/injectFileName',
+    '^.+\\.[jt]sx?$': '<rootDir>/scripts/babel-jest.js',
+    '^.+\\.mdx$': '@storybook/addon-docs/jest-transform-mdx',
+  },
+  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/dist/',
+    'addon-jest.test.js',
+    '/cli/test/',
+    '/examples/cra-kitchen-sink/src/*',
+    '/examples/cra-react15/src/*',
+    '/examples/cra-ts-kitchen-sink/src/components/*',
+    '/examples/angular-cli/src/app/*',
+  ],
+  collectCoverage: false,
+  collectCoverageFrom: [
+    'app/**/*.{js,jsx,ts,tsx}',
+    'lib/**/*.{js,jsx,ts,tsx}',
+    'addons/**/*.{js,jsx,ts,tsx}',
+  ],
+  coveragePathIgnorePatterns: [
+    '/node_modules/',
+    '/cli/test/',
+    '/dist/',
+    '/generators/',
+    '/dll/',
+    '/__mocks__ /',
+    '/__testfixtures__/',
+  ],
+  globals: {
+    DOCS_MODE: false,
+    PREVIEW_URL: undefined,
+  },
+  snapshotSerializers: ['jest-emotion', 'enzyme-to-json/serializer'],
+  coverageDirectory: 'coverage',
+  setupFilesAfterEnv: ['./scripts/jest.init.js'],
+  coverageReporters: ['lcov'],
+  testEnvironment: 'jest-environment-jsdom-thirteen',
+  setupFiles: ['raf/polyfill'],
+  testURL: 'http://localhost',
+  modulePathIgnorePatterns: ['/dist/.*/__mocks__/'],
+  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
+  watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
+};
