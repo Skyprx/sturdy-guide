@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "downlevelIteration": true
+  },
+  "include": ["src/**/*", "typings.d.ts"],
+  "exclude": ["src/**.test.ts"],
+  "files": ["./typings.d.ts"]
+}
