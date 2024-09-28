@@ -5836,8 +5836,8 @@ __metadata:
   linkType: soft
 
 "@storybook/addon-designs@npm:^7.0.4":
-  version: 7.0.7
-  resolution: "@storybook/addon-designs@npm:7.0.7"
+  version: 7.0.9
+  resolution: "@storybook/addon-designs@npm:7.0.9"
   dependencies:
     "@figspec/react": "npm:^1.0.0"
   peerDependencies:
@@ -5854,7 +5854,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10c0/650cb4254a2e12b5c80cc999fb9048efc6ce9bf0d9a29b78a5b5e4fc1e9a67d0b1e5f58ee3fa14780efcb3c896967017d56b11dde989ea1931db409e3ca534f1
+  checksum: 10c0/e27528e64a9bb21cd194d6940d852d88828ca6b2e473b9fa69ac8d4446322935bf73286d98d22bdd6316937db176a1295a6befd1ba4a8021105b5eebb4099950
   languageName: node
   linkType: hard
 
