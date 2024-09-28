@@ -30,11 +30,13 @@ __metadata:
   linkType: hard
 
 "@analogjs/vite-plugin-angular@npm:^0.2.24":
-  version: 0.2.28
-  resolution: "@analogjs/vite-plugin-angular@npm:0.2.28"
+  version: 0.2.45
+  resolution: "@analogjs/vite-plugin-angular@npm:0.2.45"
+  dependencies:
+    ts-morph: "npm:^21.0.0"
   peerDependencies:
     "@angular-devkit/build-angular": ^15.0.0 || >=16.0.0
-  checksum: 10c0/5677d251206d8eb4e7f2da6f43d8c6baf738c1c7fa9c4880e2c2360963d985a40a66c208e56700200e90dbc62634f33841b75f55683623853778b70bdd653dec
+  checksum: 10c0/9a11e92af76acf454c681c8f978d8e2f5f09367478ac7404b6992645dffdf3f5b85d4bb23745ed84407f160991ef02c290f0b4bb9e61ca144b3728da34e706af
   languageName: node
   linkType: hard
 
@@ -7912,6 +7914,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ts-morph/common@npm:~0.22.0":
+  version: 0.22.0
+  resolution: "@ts-morph/common@npm:0.22.0"
+  dependencies:
+    fast-glob: "npm:^3.3.2"
+    minimatch: "npm:^9.0.3"
+    mkdirp: "npm:^3.0.1"
+    path-browserify: "npm:^1.0.1"
+  checksum: 10c0/1f1ff7fee54414e09803b1ba559ff51881b821c19bc97cb19d06fc46c58957dea4a58e6a83e9f2e30e08c8179d6d142e45be329d9242f410323795b5c1e04806
+  languageName: node
+  linkType: hard
+
 "@tsconfig/node10@npm:^1.0.7":
   version: 1.0.9
   resolution: "@tsconfig/node10@npm:1.0.9"
@@ -12464,6 +12478,13 @@ __metadata:
   version: 4.6.0
   resolution: "co@npm:4.6.0"
   checksum: 10c0/c0e85ea0ca8bf0a50cbdca82efc5af0301240ca88ebe3644a6ffb8ffe911f34d40f8fbcf8f1d52c5ddd66706abd4d3bfcd64259f1e8e2371d4f47573b0dc8c28
+  languageName: node
+  linkType: hard
+
+"code-block-writer@npm:^12.0.0":
+  version: 12.0.0
+  resolution: "code-block-writer@npm:12.0.0"
+  checksum: 10c0/ced73cdc466bff968bba9e8e32340d88420d25a229b9269f7425a10a7c2c9a12ca702dcb601b2462b96472d354f021cf66e552179fcbe30c8f7ecd0173c5fa07
   languageName: node
   linkType: hard
 
@@ -21629,6 +21650,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mkdirp@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "mkdirp@npm:3.0.1"
+  bin:
+    mkdirp: dist/cjs/src/bin.js
+  checksum: 10c0/9f2b975e9246351f5e3a40dcfac99fcd0baa31fbfab615fe059fb11e51f10e4803c63de1f384c54d656e4db31d000e4767e9ef076a22e12a641357602e31d57d
+  languageName: node
+  linkType: hard
+
 "mktemp@npm:~0.4.0":
   version: 0.4.0
   resolution: "mktemp@npm:0.4.0"
@@ -27993,6 +28023,16 @@ __metadata:
   version: 1.0.3
   resolution: "ts-map@npm:1.0.3"
   checksum: 10c0/82a790ffff3b3b18a024402c612a327407de79ce318270d60c2a247f0fb7c1d3d3afecbf38098a7897fe444dd576d01c017942a5ab692317bd4316bc87f195a9
+  languageName: node
+  linkType: hard
+
+"ts-morph@npm:^21.0.0":
+  version: 21.0.1
+  resolution: "ts-morph@npm:21.0.1"
+  dependencies:
+    "@ts-morph/common": "npm:~0.22.0"
+    code-block-writer: "npm:^12.0.0"
+  checksum: 10c0/ed1d4ccdeba2300cfa236f2aaf64bb462aa386141e659a08d8a2eb96d3b4b274abc9d97b8dd06a0c13af79187b197f38f6a8baca709f99d11094a82c8abccf27
   languageName: node
   linkType: hard
 
