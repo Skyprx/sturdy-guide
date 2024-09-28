@@ -3670,11 +3670,11 @@ __metadata:
   linkType: hard
 
 "@happy-dom/global-registrator@npm:^14.12.0":
-  version: 14.12.0
-  resolution: "@happy-dom/global-registrator@npm:14.12.0"
+  version: 14.12.3
+  resolution: "@happy-dom/global-registrator@npm:14.12.3"
   dependencies:
-    happy-dom: "npm:^14.12.0"
-  checksum: 10c0/dae4356c93343950aef2483f038aaad462dce178c2737268abfd1f7c5a6679c4907f384aca02e9dd746fd9f1779010aa2bd7b5c7fa7a5d7707f3df4a3798c415
+    happy-dom: "npm:^14.12.3"
+  checksum: 10c0/017bea87f4cdf67b025b926484197a4a73fdc9bb8eb2dc816b0574ba0d6b58277652bc2f9efb196d4ac8487dee26480cba3b470480d124f1d16b81d97f5b5703
   languageName: node
   linkType: hard
 
@@ -17097,6 +17097,17 @@ __metadata:
     webidl-conversions: "npm:^7.0.0"
     whatwg-mimetype: "npm:^3.0.0"
   checksum: 10c0/b844d7f3f16d2657a8650e0968ddd9272f152cfd9660e0dd4378215f153fc940509981d387e1e855f117baf0cf432918ff084f10c9b557192db5d7743d78302e
+  languageName: node
+  linkType: hard
+
+"happy-dom@npm:^14.12.3":
+  version: 14.12.3
+  resolution: "happy-dom@npm:14.12.3"
+  dependencies:
+    entities: "npm:^4.5.0"
+    webidl-conversions: "npm:^7.0.0"
+    whatwg-mimetype: "npm:^3.0.0"
+  checksum: 10c0/72e817bc9d03c4c0dbb794f8fb5b69aac4b4dbe0ee789a6b6a02a60298a9aa99bac766967a5c642153e5c95c02489437f878de5641ed64fd13b2271c56805df5
   languageName: node
   linkType: hard
 
