@@ -2766,15 +2766,15 @@ __metadata:
   linkType: hard
 
 "@digitak/esrun@npm:^3.2.2":
-  version: 3.2.25
-  resolution: "@digitak/esrun@npm:3.2.25"
+  version: 3.2.26
+  resolution: "@digitak/esrun@npm:3.2.26"
   dependencies:
     "@digitak/grubber": "npm:^3.1.4"
     chokidar: "npm:^3.5.1"
     esbuild: "npm:^0.17.4"
   bin:
     esrun: bin.js
-  checksum: 10c0/d2d3291a15fae43e3cba875d12a5bea6453dfe625af90ef7835e9071db31b769219401197fe1d5efde57cf7f1eda204ca68c99022fdc0039eb057052c60d15fc
+  checksum: 10c0/ad3a40e551c05a49c178b1cdc955e292b74164c090916d3340767e8258467b3f2689a833f5edf1025cfa4b8722113f94cadde779c48fa7a08360a2c68acdbce8
   languageName: node
   linkType: hard
 
