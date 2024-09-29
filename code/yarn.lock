@@ -8633,12 +8633,12 @@ __metadata:
   linkType: hard
 
 "@types/react-refresh@npm:^0":
-  version: 0.14.5
-  resolution: "@types/react-refresh@npm:0.14.5"
+  version: 0.14.6
+  resolution: "@types/react-refresh@npm:0.14.6"
   dependencies:
     "@types/babel__core": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 10c0/7fc9e1a2b5bc096ba2259b5df9dc036b330d1791bb9fc27b6426db7f2c86be42449713e09f0244d82ecdf596c45bead8feccac032ef0efe4853cb2086ee1ffbe
+  checksum: 10c0/8a06ae4b3be6baf4bbe3a8c200df0a4730fbe6e9d09e4f03ceed59612328a28e711b920532cbbbd7aca082744ece51e957ae8b34f656fffb965b448fb0967ef1
   languageName: node
   linkType: hard
 
