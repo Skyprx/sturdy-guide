@@ -6959,7 +6959,7 @@ __metadata:
   resolution: "@storybook/preset-create-react-app@workspace:presets/create-react-app"
   dependencies:
     "@pmmmwh/react-refresh-webpack-plugin": "npm:^0.5.1"
-    "@storybook/react-docgen-typescript-plugin": "npm:1.0.6--canary.9.0c3f3b7.0"
+    "@storybook/react-docgen-typescript-plugin": "npm:1.0.6--canary.9.f9c48c0.0"
     "@types/node": "npm:^22.0.0"
     "@types/semver": "npm:^7.5.6"
     pnp-webpack-plugin: "npm:^1.7.0"
@@ -7005,7 +7005,7 @@ __metadata:
   dependencies:
     "@storybook/core-webpack": "workspace:*"
     "@storybook/react": "workspace:*"
-    "@storybook/react-docgen-typescript-plugin": "npm:1.0.6--canary.9.0c3f3b7.0"
+    "@storybook/react-docgen-typescript-plugin": "npm:1.0.6--canary.9.f9c48c0.0"
     "@types/node": "npm:^22.0.0"
     "@types/semver": "npm:^7.3.4"
     find-up: "npm:^5.0.0"
@@ -7098,21 +7098,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@storybook/react-docgen-typescript-plugin@npm:1.0.6--canary.9.0c3f3b7.0":
-  version: 1.0.6--canary.9.0c3f3b7.0
-  resolution: "@storybook/react-docgen-typescript-plugin@npm:1.0.6--canary.9.0c3f3b7.0"
+"@storybook/react-docgen-typescript-plugin@npm:1.0.6--canary.9.f9c48c0.0":
+  version: 1.0.6--canary.9.f9c48c0.0
+  resolution: "@storybook/react-docgen-typescript-plugin@npm:1.0.6--canary.9.f9c48c0.0"
   dependencies:
+    "@storybook/react-docgen-typescript": "npm:^2.2.4-next.1"
     debug: "npm:^4.1.1"
     endent: "npm:^2.0.1"
     find-cache-dir: "npm:^3.3.1"
     flat-cache: "npm:^3.0.4"
     micromatch: "npm:^4.0.2"
-    react-docgen-typescript: "npm:^2.2.2"
     tslib: "npm:^2.0.0"
   peerDependencies:
     typescript: ">= 4.x"
     webpack: ">= 4"
-  checksum: 10c0/505a728f36df3f519f4985bdf18f2078ea18a1a8f7f837fc831f971363fb7643a182f01a6857a9729ac5a1246d370526fca5a19017f82e7493af4ca945cb7235
+  checksum: 10c0/9a1bc69edf183b5d706c90fe62b83da573bd77eb9a5923c958179d67ed6372c739b55ab8736634fdd6b2d284049421b526b48202531e3c024fc8ce35a6e639c9
+  languageName: node
+  linkType: hard
+
+"@storybook/react-docgen-typescript@npm:^2.2.4-next.1":
+  version: 2.2.4-next.1
+  resolution: "@storybook/react-docgen-typescript@npm:2.2.4-next.1"
+  peerDependencies:
+    typescript: ">= 4.3.x"
+  checksum: 10c0/bc52bc610f90079b87e0d2a575e079ec320890cb549e4340518c45490efa8065993044e93eac40d80cac814b239eab71ed86e5c9e316974ec19c792b76afd267
   languageName: node
   linkType: hard
 
