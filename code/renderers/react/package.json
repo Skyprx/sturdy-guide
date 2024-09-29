@@ -68,7 +68,7 @@
     "@storybook/preview-api": "workspace:^",
     "@storybook/react-dom-shim": "workspace:*",
     "@storybook/theming": "workspace:^",
-    "@types/escodegen": "^0.0.6",
+    "@types/escodegen": "^0.0.10",
     "@types/estree": "^0.0.51",
     "@types/node": "^22.0.0",
     "acorn": "^7.4.1",

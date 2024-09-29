@@ -7192,7 +7192,7 @@ __metadata:
     "@storybook/test": "workspace:*"
     "@storybook/theming": "workspace:^"
     "@types/babel-plugin-react-docgen": "npm:^4"
-    "@types/escodegen": "npm:^0.0.6"
+    "@types/escodegen": "npm:^0.0.10"
     "@types/estree": "npm:^0.0.51"
     "@types/node": "npm:^22.0.0"
     "@types/semver": "npm:^7.3.4"
@@ -8197,10 +8197,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/escodegen@npm:^0.0.6":
-  version: 0.0.6
-  resolution: "@types/escodegen@npm:0.0.6"
-  checksum: 10c0/bbef189319c7b0386486bc7224369f118c7aedf35cc13e40ae5879b9ab4f848936f31e8eea50e71d4de72d4b7a77d9e6e9e5ceec4406c648fbc0077ede634ed5
+"@types/escodegen@npm:^0.0.10":
+  version: 0.0.10
+  resolution: "@types/escodegen@npm:0.0.10"
+  checksum: 10c0/e6a010c6cd5bd2d31db61f79dcb95af64df1d735417a78167c753768a850a2983730b855ad7c9e080e279b2b09678d3674c3c735e25613d4058341fcd90988f1
   languageName: node
   linkType: hard
 
