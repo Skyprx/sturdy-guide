@@ -8484,13 +8484,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mime@npm:*":
-  version: 3.0.2
-  resolution: "@types/mime@npm:3.0.2"
-  checksum: 10c0/7eef33033d9990881626611ef87d0dbb06ebff96a7ee09303874389eb482acd0fbf20fe2dc96edb861095e42e6c18d5df8476840131f9c06c57be6f1c1dc77fe
-  languageName: node
-  linkType: hard
-
 "@types/mime@npm:^1":
   version: 1.3.3
   resolution: "@types/mime@npm:1.3.3"
@@ -8738,13 +8731,13 @@ __metadata:
   linkType: hard
 
 "@types/serve-static@npm:*, @types/serve-static@npm:^1.13.10, @types/serve-static@npm:^1.13.8":
-  version: 1.15.5
-  resolution: "@types/serve-static@npm:1.15.5"
+  version: 1.15.7
+  resolution: "@types/serve-static@npm:1.15.7"
   dependencies:
     "@types/http-errors": "npm:*"
-    "@types/mime": "npm:*"
     "@types/node": "npm:*"
-  checksum: 10c0/811d1a2f7e74a872195e7a013bcd87a2fb1edf07eaedcb9dcfd20c1eb4bc56ad4ea0d52141c13192c91ccda7c8aeb8a530d8a7e60b9c27f5990d7e62e0fecb03
+    "@types/send": "npm:*"
+  checksum: 10c0/26ec864d3a626ea627f8b09c122b623499d2221bbf2f470127f4c9ebfe92bd8a6bb5157001372d4c4bd0dd37a1691620217d9dc4df5aa8f779f3fd996b1c60ae
   languageName: node
   linkType: hard
 
