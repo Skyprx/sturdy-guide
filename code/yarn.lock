@@ -17154,18 +17154,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:^14.12.0":
-  version: 14.12.0
-  resolution: "happy-dom@npm:14.12.0"
-  dependencies:
-    entities: "npm:^4.5.0"
-    webidl-conversions: "npm:^7.0.0"
-    whatwg-mimetype: "npm:^3.0.0"
-  checksum: 10c0/b844d7f3f16d2657a8650e0968ddd9272f152cfd9660e0dd4378215f153fc940509981d387e1e855f117baf0cf432918ff084f10c9b557192db5d7743d78302e
-  languageName: node
-  linkType: hard
-
-"happy-dom@npm:^14.12.3":
+"happy-dom@npm:^14.12.0, happy-dom@npm:^14.12.3":
   version: 14.12.3
   resolution: "happy-dom@npm:14.12.3"
   dependencies:
