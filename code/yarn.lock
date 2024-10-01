@@ -15920,14 +15920,14 @@ __metadata:
   linkType: hard
 
 "file-system-cache@npm:^2.4.4":
-  version: 2.4.4
-  resolution: "file-system-cache@npm:2.4.4"
+  version: 2.4.7
+  resolution: "file-system-cache@npm:2.4.7"
   dependencies:
     "@types/fs-extra": "npm:11.0.1"
     "@types/ramda": "npm:0.29.3"
     fs-extra: "npm:11.1.1"
     ramda: "npm:0.29.0"
-  checksum: 10c0/274bd9c2f8f81d0c3b2cc0d077807c969b48cac4857ae77f87b4b480548252aa42d3a43b3e9d4bb54df567eb70f0c384782514fcea74b78765543e9496e27e2d
+  checksum: 10c0/4af15aaaf10e36c70e1d21c35649ce2bfd334b9b90c467e08a22f28e8fa3755d468cf28b0e49403d20473fa43542ebad35b0c898582db484acf72986a859eab4
   languageName: node
   linkType: hard
 
