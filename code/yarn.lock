@@ -14711,8 +14711,8 @@ __metadata:
   linkType: hard
 
 "esbuild-loader@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "esbuild-loader@npm:4.2.0"
+  version: 4.2.2
+  resolution: "esbuild-loader@npm:4.2.2"
   dependencies:
     esbuild: "npm:^0.21.0"
     get-tsconfig: "npm:^4.7.0"
@@ -14720,7 +14720,7 @@ __metadata:
     webpack-sources: "npm:^1.4.3"
   peerDependencies:
     webpack: ^4.40.0 || ^5.0.0
-  checksum: 10c0/4d53c8c9f083f156280274e73c8b27cdb9ca1c97d912b29e3291f51cbd92ea17b2a8d2996bcec6448febaab5ee9a81c6d5b4e4bc0576688a524455e35b05c59c
+  checksum: 10c0/be15346c570c02a7f4caa6c59bf57287eee9b5e37f34b0275507d3fea4d7c67e7e773b4a5bed1cd2e1a94e66bd650454471a3d0de769dfef57e104ef211ea3d4
   languageName: node
   linkType: hard
 
