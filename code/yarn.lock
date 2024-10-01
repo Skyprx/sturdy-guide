@@ -23813,13 +23813,13 @@ __metadata:
   linkType: hard
 
 "prettier-plugin-merge@npm:^0.7.0":
-  version: 0.7.0
-  resolution: "prettier-plugin-merge@npm:0.7.0"
+  version: 0.7.1
+  resolution: "prettier-plugin-merge@npm:0.7.1"
   dependencies:
     diff: "npm:5.1.0"
   peerDependencies:
     prettier: ^2 || ^3
-  checksum: 10c0/4c4fbb50596d731b9a8942aa97848c8f20b13e69b17cb10ea0d53cf069ea13a197342daafecc533009c16fc778c157d407e9a1dcda1b8a7ab60be8b9b01c6a4f
+  checksum: 10c0/b8e14b8b973f0dd17b3f4c51b1a5bd0df4d0ee29b9a920f5c16112e502ec61da1e227b17d3114b0fe6197fb88c7b2352e8071cedaa9bec75857c220075868aa6
   languageName: node
   linkType: hard
 
