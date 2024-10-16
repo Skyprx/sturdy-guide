@@ -84,7 +84,7 @@
     "@storybook/react": "*",
     "@storybook/react-webpack5": "*",
     "formik": "^2.2.9",
-    "next": "^12.1.0",
+    "next": "^14.2.7",
     "nextra": "^1.1.0",
     "nextra-theme-docs": "^1.2.6",
     "prop-types": "^15.8.1",
