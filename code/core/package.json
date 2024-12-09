@@ -383,7 +383,7 @@
     "markdown-to-jsx": "^7.4.5",
     "memfs": "^4.11.1",
     "memoizerific": "^1.11.3",
-    "nanoid": "^4.0.2",
+    "nanoid": "^5.0.0",
     "npmlog": "^7.0.0",
     "open": "^8.4.0",
     "picomatch": "^2.3.0",
