@@ -8853,9 +8853,9 @@ __metadata:
   linkType: hard
 
 "@types/util-deprecate@npm:^1.0.0":
-  version: 1.0.3
-  resolution: "@types/util-deprecate@npm:1.0.3"
-  checksum: 10c0/901ae94b51c1a5a7e3c88afddf9396ba25c0d0f699ca89ea0e48f121d5880c3996e037f0c83465e8a75263a27bf29347e1a584d51152c637194614a2c15f7742
+  version: 1.0.4
+  resolution: "@types/util-deprecate@npm:1.0.4"
+  checksum: 10c0/06a36368ea511004ca2c300a1f704461fe2e79ccdba2d8ae443cd34a8d36074aa1fb832f316a17a7015f241a186bacccddca863f71ab7e80f8134fb935e1fd89
   languageName: node
   linkType: hard
 
