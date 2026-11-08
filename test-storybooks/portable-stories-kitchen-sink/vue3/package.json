@@ -78,7 +78,7 @@
     "@storybook/web-components": "file:../../../code/renderers/web-components",
     "@storybook/web-components-vite": "file:../../../code/frameworks/web-components-vite",
     "@storybook/web-components-webpack5": "file:../../../code/frameworks/web-components-webpack5",
-    "playwright": "1.46.0",
+    "playwright": "1.55.1",
     "storybook": "file:../../../code/lib/cli"
   },
   "dependencies": {
